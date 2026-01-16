@@ -5,7 +5,7 @@ Un juego de consola clásico desarrollado en **Python**. El objetivo es adivinar
 ## 📋 Características
 * 🔢 Generación de números aleatorios.
 * 🛡️ Validación de errores (evita que el programa falle si escribes letras).
-* 🔄 Bucle de juego infinito hasta adivinar.
+* ❤️ Tienes 7 VIDAS para adivinar el número del 1 al 100.
 * 🏆 Contador de intentos.
 
 ## 🚀 Requisitos
@@ -18,4 +18,4 @@ Un juego de consola clásico desarrollado en **Python**. El objetivo es adivinar
    ```bash
    python adivina.py
 
-Desarrollado con 🐍 Python por Samuel Martinez
+* Desarrollado con 🐍 Python por Samuel Martinez
