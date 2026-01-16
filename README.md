@@ -17,3 +17,5 @@ Un juego de consola clásico desarrollado en **Python**. El objetivo es adivinar
 3. Ejecuta el siguiente comando:
    ```bash
    python adivina.py
+
+Desarrollado con 🐍 Python por Samuel Martinez
