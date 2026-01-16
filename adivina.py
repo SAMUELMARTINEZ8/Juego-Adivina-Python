@@ -1,3 +1,7 @@
+# Juego de Adivina el Número
+# Creado por: Samuel Martinez
+# Versión: 1.0
+
 import random  # Traemos la herramienta para generar números aleatorios
 
 def juego_adivinanza():
