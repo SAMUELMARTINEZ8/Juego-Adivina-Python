@@ -1,45 +1,51 @@
 # Juego de Adivina el Número
-# Creado por: Samuel Martinez
-# Versión: 1.0
+# Creado por: Samuel Martinez 
+# Versión: 2.0 (Con dificultad añadida)
 
-import random  # Traemos la herramienta para generar números aleatorios
+import random
 
 def juego_adivinanza():
     print("=======================================")
     print("   ¡BIENVENIDO A ADIVINA EL NÚMERO!    ")
     print("=======================================")
-    print("Estoy pensando en un número del 1 al 100...")
+    print("Tienes 7 VIDAS para adivinar el número del 1 al 100.")
+    print("=======================================")
 
-    # 1. La computadora elige un número al azar
     numero_secreto = random.randint(1, 100)
     intentos = 0
+    max_intentos = 7  # 💀 Definimos el límite de vidas
 
-    # 2. Iniciamos un bucle infinito (se repite hasta que ganemos)
     while True:
-        # Pedimos el número al usuario
-        usuario_dice = input("¿Cuál crees que es?: ")
+        # Mostramos cuántas vidas le quedan
+        vidas_restantes = max_intentos - intentos
+        print(f"\n❤️ Vidas restantes: {vidas_restantes}")
 
-        # Convertimos el texto a número entero
+        usuario_dice = input("¿Cuál es el número?: ")
+
         try:
             numero_usuario = int(usuario_dice)
         except ValueError:
-            print("❌ Error: ¡Por favor ingresa solo números!")
-            continue # Vuelve al inicio del bucle
+            print("❌ Error: ¡Solo números por favor!")
+            continue
 
-        intentos = intentos + 1  # Sumamos un intento
+        intentos = intentos + 1
 
-        # 3. Lógica de decisión (Comparaciones)
+        # 1. Revisamos si GANÓ
+        if numero_usuario == numero_secreto:
+            print(f"\n🎉 ¡GANASTE! El número era {numero_secreto}.")
+            print(f"🏆 Te sobraron {max_intentos - intentos} vidas.")
+            break
+        
+        # 2. 💀 Revisamos si PERDIÓ (Game Over)
+        if intentos >= max_intentos:
+            print(f"\n💀 GAME OVER. Se te acabaron las vidas.")
+            print(f"El número secreto era: {numero_secreto}")
+            break
+
+        # 3. Si no ganó ni perdió, damos pistas
         if numero_usuario < numero_secreto:
-            print("🔼 ¡Más alto! Busca un número mayor.")
-        
+            print("🔼 ¡Más alto!")
         elif numero_usuario > numero_secreto:
-            print("🔽 ¡Más bajo! Te pasaste.")
-        
-        else:
-            # Si no es mayor ni menor, ¡es igual! (Ganaste)
-            print(f"🎉 ¡FELICIDADES! Adivinaste el número {numero_secreto}.")
-            print(f"🏆 Te tomó {intentos} intentos.")
-            break  # Rompemos el bucle para terminar el juego
+            print("🔽 ¡Más bajo!")
 
-# Ejecutamos la función
 juego_adivinanza()
