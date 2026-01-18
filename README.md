@@ -18,4 +18,5 @@ Un juego de consola clásico desarrollado en **Python**. El objetivo es adivinar
    ```bash
    python adivina.py
 
-* Desarrollado con 🐍 Python por Samuel Martinez
+---
+*Desarrollado por Samuel Martinez 🐵*
