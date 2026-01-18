@@ -19,4 +19,4 @@ Un juego de consola clásico desarrollado en **Python**. El objetivo es adivinar
    python adivina.py
 
 ---
-*Desarrollado por Samuel Martinez 🐵*
+*Desarrollado por Samuel Martinez 🐵* 
